@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thylmeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>
+        <a th:href="@{/params/string(texto='Hola Carlos')}">/params/string?texto?Hola Carlos</a>
+    </li>
+    <li>
+        <a th:href="@{/params/string(texto='Hola Juan')}">/params/string?texto?Hola Juan</a>
+    </li>
+
+    <li>
+        <a th:href="@{/params/mix-params(nombre='Juan', edad=20)}">/params/mix-params(nombre='Juan')</a>
+    </li>
+
+    <li>
+        <a th:href="@{/params/mix-params-request(nombre='Juan', edad=20)}">/params/mix-params-request(nombre='Juan')</a>
+    </li>
+
+
+    <!--    <li>-->
+<!--        <a th:href="@{/params/mix-params(edad=20)}">/params/mix-params(edad=20)}"</a>-->
+<!--    </li>-->
+</ul>
+</body>
+</html>

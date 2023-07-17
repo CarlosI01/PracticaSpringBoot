@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thylmeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+    <span th:text="${user.nombre}"></span>
+    <span th:text="${user.apellido}"></span>
+    <br>
+    <span th:if="${user.gmail}" th:text="${user.gmail}"></span>
+    <br>
+    <!--<span th:if="${user.gmail == null}" th:text="'El usuario no cuenta con un correo'"></span>-->
+
+</body>
+</html>

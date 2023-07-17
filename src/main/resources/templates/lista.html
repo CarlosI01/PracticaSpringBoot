@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thylmeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${titulo}"></title>
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+    <div th:if="${usuario.size()==0}"> No hay usuarios </div>
+<!--    <div th:if="${not usuario.isEmpty()}"> No hay usuarios </div>-->
+<!--    <div th:if="${!usuario.isEmpty()}"> No hay usuarios </div>-->
+
+    <table th:if="${usuario.size() > 0 }">
+      <thead>
+      <th>
+      <td>Nombre</td>
+      <td>Apellido</td>
+      <td>Email</td>
+      </th>
+      </thead>
+      <tbody>
+      <tr th:each="usuarios: ${usuario}">
+        <td th:text="${usuarios.nombre}"></td>
+        <td th:text="${usuarios.apellido}"></td>
+        <td th:text="${usuarios.gmail}"></td>
+      </tr>
+      </tbody>
+    </table>
+</body>
+</html>
